@@ -1,0 +1,20 @@
+//animation
+@mixin animation(
+  $delay: 0s,
+  $direction: normal,
+  $duration: 1s,
+  $fill-mode: forwards,
+  $iteration-count: 1,
+  $name:'hoge',
+  $timing-function: ease
+) {
+  animation: {
+    delay: $delay;
+    direction: $direction;
+    duration: $duration;
+    fill-mode: $fill-mode;
+    iteration-count: $iteration-count;
+    name: $name;
+    timing-function: $timing-function;
+  }
+}

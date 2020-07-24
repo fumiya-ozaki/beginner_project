@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.min.css" />
+    <link rel="stylesheet" href="styles/responsive.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+        <div class="header__logo">ロゴ</div>
+        <ul class="header__container">
+          <li class="header__link"><a href=""> リンク1</a></li>
+          <li class="header__link"><a href=""> リンク2</a></li>
+          <li class="header__link"><a href=""> リンク3</a></li>
+          <li class="header__link"><a href=""> リンク4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main-visual content-width content-height">
+      <main>
+        <h1 class="main-title">Your first web</h1>
+        <p class="main-text">これはあなたのWebページです</p>
+        <div class="main-visual__image">
+          <img src="image/main-visual.jpeg" alt="ビルの写真">
+        </div>
+      </main>
+    </section>
+
+    <section class="tab content-width content-height">
+      <h2 class="main-title">タブ</h2>
+      <p class="main-text">こちらはタブエリアです</p>
+      <ul class="tab__label-container">
+        <li class="tab__label"><a href="#" class="active" data-id="tab1">タブ１</a></li>
+        <li class="tab__label"><a href="#" data-id="tab2">タブ２</a></li>
+        <li class="tab__label"><a href="#" data-id="tab3">タブ３</a></li>
+      </ul>
+      <div class="tab__content active" id="tab1">
+        <p>タブ１の情報（この中に写真やテキストを入れましょう）</p>
+      </div>
+      <div class="tab__content" id="tab2">
+        <p>タブ２の情報（この中に写真やテキストを入れましょう）</p>
+      </div>
+      <div class="tab__content" id="tab3">
+        <p>タブ３の情報（この中に写真やテキストを入れましょう）</p>
+      </div>
+    </section>
+
+    <section class="modal content-width content-height">
+      <h2 class="main-title">モーダル</h2>
+      <p class="main-text">こちらはモーダルエリアです</p>
+
+      <div class="modal__info-container">
+        <p>各モーダルについての説明や画像を入れましょう</p>
+        <div class="modal__btn-container">
+          <button class="modal__btn" id="modalOpen1">モーダル１</button>
+          <button class="modal__btn" id="modalOpen2">モーダル２</button>
+          <button class="modal__btn" id="modalOpen3">モーダル３</button>
+          <button class="modal__btn" id="modalOpen4">モーダル４</button>
+        </div>
+      </div>
+        
+      <div class="modal__contents-container" id="modalArea">
+        <div class="modal__content" id="modal1">
+          <p>モーダル1</p>
+          <p>これはモーダル1です。×ボタンやマスク（黒い部分を）クリックしても戻ります</p>
+        </div>
+  
+        <div class="modal__content" id="modal2">
+          <p>モーダル2</p>
+          <p>これはモーダル２です。×ボタンやマスク（黒い部分を）クリックしても戻ります</p>
+        </div>
+  
+        <div class="modal__content" id="modal3">
+          <p>モーダル3</p>
+          <p>これはモーダル３です。×ボタンやマスク（黒い部分を）クリックしても戻ります</p>
+        </div>
+        <div class="modal__content" id="modal4">
+          <p>モーダル4</p>
+          <p>これはモーダル４です。×ボタンやマスク（黒い部分を）クリックしても戻ります</p>
+        </div>
+        <a id="modalClose" class="modal__close">
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="mask" id="mask"></div>
+  
+    </section>
+
+    <section class="slider content-width content-height">
+      <h2 class="main-title">スライダー</h2>
+      <p class="main-text">こちらはスライダーエリアです</p>
+      <div class="swiper-container" id="swiper-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide1"><img src="image/slider_01.jpeg" alt=""></div>
+          <div class="swiper-slide slide2"><img src="image/slider_02.jpeg" alt=""></div>
+          <div class="swiper-slide slide3"><img src="image/slider_03.jpeg" alt=""></div>
+          <div class="swiper-slide slide4"><img src="image/slider_04.jpeg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </section>
+
+    <section class="question content-width content-height">
+      <h2 class="main-title">よくある質問</h2>
+      <p class="main-text">こちらはよくある質問です</p>
+
+      <dl class="acordion" id="acordion">
+        <dt class="acordion__title arrow">
+          お問い合わせ１<br>
+          <div class="closeBtn1">
+              <span></span>
+              <span></span>
+          </div>
+        </dt>
+        <dd class="acordion__content">
+          回答１<br>
+          お問合わせありがとうございます。<br>
+          お問い合わせ１の回答です。
+          <span class="closeBtn2">閉じる</span>
+  
+        </dd>
+        <dt class="acordion__title arrow">
+          お問い合わせ２
+          <div class="closeBtn1">
+              <span></span>
+              <span></span>
+          </div>
+        </dt>
+        <dd class="acordion__content">
+          回答2<br>
+          お問合わせありがとうございます。<br>
+          お問い合わせ２の回答です
+          <span class="closeBtn2">閉じる</span>
+        </dd>
+        <dt class="acordion__title arrow">
+          お問い合わせ３
+          <div class="closeBtn1">
+              <span></span>
+              <span></span>
+          </div>
+        </dt>
+        <dd class="acordion__content">
+          回答3<br>
+          お問合わせありがとうございます。<br>
+          お問い合わせ３の回答です
+          <span class="closeBtn2">閉じる</span>
+        </dd>
+      </dl>
+  
+    </section>
+
+    <footer>
+      <nav>
+        <ul class="footer">
+          <li class="footer__content"><a href="">プライバシーポリシー</a></li>
+          <li class="footer__content"><a href="">Facebook</a></li>
+          <li class="footer__content"><a href="">Twitter</a></li>
+        </ul>
+      </nav>
+    </footer>
+<script src="scripts/main.js"></script>
+  </body>
+</html>

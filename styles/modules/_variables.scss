@@ -1,0 +1,102 @@
+/******************************************************************
+全体適用
+******************************************************************/
+
+$cWhite: white;
+$cBlack: black;
+$cGreen: green;
+$contentMaxWidth: 1070px;
+
+/* boxsizing */
+* {
+  box-sizing: border-box;
+}
+
+/* googlefont */
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+.content-width {
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+  width: 90%;
+}
+
+/* <br class="br-pc"> tablet */
+.br-pc {
+  display: block;
+}
+.br-sp {
+  display: none;
+}
+.font-sm {
+  font-size: 16px;
+}
+.font-md {
+  font-size: 19px;
+}
+.font-lr {
+  font-size: 23px;
+}
+.font-lg {
+  font-size: 36px;
+}
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 150px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 150px !important;
+}
+
+/******************************************************************
+tabletで適用
+******************************************************************/
+
+@media screen and (min-width: 481px) and (max-width: 959px) {
+  //tablet start
+}
+
+/******************************************************************
+smartphoneで適用
+******************************************************************/
+
+@media screen and (max-width: 480px) {
+  /* <br class="br-sp"> smartphone */
+  .br-pc {
+    display: none;
+  }
+  .br-sp {
+    display: block;
+  }
+  .font-sm {
+    font-size: 14px;
+  }
+  .font-md {
+    font-size: 17px;
+  }
+  .font-lr {
+    font-size: 17px;
+  }
+  .font-lg {
+    font-size: 25px;
+  }
+  .mb-sm {
+    margin-bottom: 16px !important;
+  }
+  .mb-lg {
+    margin-bottom: 80px !important;
+  }
+  .pb-sm {
+    padding-bottom: 16px !important;
+  }
+  .pb-lg {
+    padding-bottom: 80px !important;
+  }
+}
