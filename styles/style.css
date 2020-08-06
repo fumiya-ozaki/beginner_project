@@ -259,7 +259,7 @@ smartphoneで適用
 
 header {
   position: fixed;
-  z-index: 15;
+  z-index: 5;
   width: 100vw;
 }
 
@@ -311,10 +311,6 @@ header .header__link a {
   height: 50vh;
   object-fit: cover;
   width: 100%;
-}
-
-.tab {
-  font-size: 14px;
 }
 
 .tab__label-container {
@@ -384,7 +380,7 @@ header .header__link a {
   transform: translate(-50%, -50%) scale(0.7);
   transition: 0.3s;
   visibility: hidden;
-  z-index: 10;
+  z-index: 15;
   opacity: 0;
 }
 
@@ -445,7 +441,7 @@ header .header__link a {
   transition: 0.3s;
   visibility: hidden;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
 }
 
 .mask.active {
@@ -472,14 +468,14 @@ header .header__link a {
   text-align: center;
 }
 
-.question .acordion__title .closeBtn1 {
+.question .acordion__title .labelIcon {
   height: 50px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.question .acordion__title .closeBtn1 span {
+.question .acordion__title .labelIcon span {
   background-color: black;
   display: block;
   height: 1px;
@@ -490,11 +486,11 @@ header .header__link a {
   transition: all .3s;
 }
 
-.question .acordion__title .closeBtn1 span:nth-child(1) {
+.question .acordion__title .labelIcon span:nth-child(1) {
   transform: translateX(-17px) rotate(90deg);
 }
 
-.question .acordion__title .closeBtn1 span:nth-child(2) {
+.question .acordion__title .labelIcon span:nth-child(2) {
   transform: translateX(-17px);
 }
 
@@ -503,11 +499,11 @@ header .header__link a {
   color: white;
 }
 
-.question .acordion__title.active .closeBtn1 span {
+.question .acordion__title.active .labelIcon span {
   background-color: white;
 }
 
-.question .acordion__title.active .closeBtn1 span:nth-child(1) {
+.question .acordion__title.active .labelIcon span:nth-child(1) {
   transform: translateX(-17px);
 }
 
@@ -520,7 +516,7 @@ header .header__link a {
   line-height: 2;
 }
 
-.question .acordion .closeBtn2 {
+.question .acordion .closeBtn {
   text-align: center;
   display: block;
   background-color: gray;

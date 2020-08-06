@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
     modalArry = ["modal1","modal2","modal3","modal4"],
     modalBtnArry = ["modalOpen1","modalOpen2","modalOpen3","modalOpen4"],
 
-    modalOpen =function(el){
+    modalOpen =function(){
       for (let i=0; i<modalArry.length; i++){
         document.getElementById(modalBtnArry[i]).addEventListener("click",function(){
           modalAreaAction();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
   modalClose("modalClose");
   modalClose("mask");
 
-  const tabLabels = document.querySelectorAll('.tab__label a ');
+  const tabLabels = document.querySelectorAll('.tab__label a');
   const tabContents = document.querySelectorAll('.tab__content');
 
   tabLabels.forEach(function(clickedLabel){
@@ -40,20 +40,20 @@ document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
       tabLabels.forEach(function(label){
         label.classList.remove('active');
       });
-      clickedLabel.classList.add('active');
+      this.classList.add('active');
       tabContents.forEach(function(content){
         content.classList.remove('active');
       });
       document.getElementById(clickedLabel.dataset.id).classList.add('active');
-    })
-  })
+    });
+  });
 
 
   const slider1 = new Swiper ('#swiper-1', {
     // Optional parameters
     loop: true, //ループ
     autoplay:{ //自動再生
-      delay:2000, //再生間隔
+      delay:2000, //　再生間隔
       disableOnInteraction: false, //ユーザー操作後の自動再生 false=on
     },
     effect: "slide",  //スライドエフェクト "slide", "fade", "cube", "coverflow","flip"
@@ -73,23 +73,19 @@ document.addEventListener('DOMContentLoaded', function(){ //DOMloadStart
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  })
+  });
   
 
   $(function(){
-    //複数開くアコーディオン
-    //タイトルクリックで開閉
     $('#acordion dt').on('click', function() {
       $(this).next().slideToggle();
       $(this).toggleClass("active");
     });
 
-    //閉じるボタンで閉
-    $('.closeBtn2').on('click',function(){
+    $('.closeBtn').on('click',function(){
       $(this).parent('dd').slideToggle();
-      console.log( $(this).parent("dd").index($("#acordion")) );
       $(this).parent('dd').prev().removeClass('active');
-    })
+    });
   });
 
 

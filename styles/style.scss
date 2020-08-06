@@ -18,7 +18,7 @@
 
 header{
   position: fixed;
-  z-index: 15;
+  z-index: 5;
   width: 100vw;
   .header{
     li:not(:last-child) {
@@ -68,39 +68,36 @@ header{
 }
 
 .tab{
-    font-size:14px;
-    &__container{
-    }
-    &__label-container {
-    display: flex;
-    }
-    &__label{
-      a{
-        text-decoration: none;
-        background-color:rgb(196, 190, 190);
-        display: inline-block;
-        text-align: center;
-        padding: 1rem 1rem;
-        color: $cBlack;
-        border-radius: 10px 10px 0 0;
-        &.active{
-          background-color: rgb(236, 230, 230);
-        }
-        &:not(.active):hover{
-          opacity: 0.5;
-          transition: 0.4s;    
-        }
-      }
-    }
-    &__content{
-      background-color: rgb(236, 230, 230);
-      display: none;
-      height: 50vh;
-      padding: 1rem;
+  &__label-container {
+  display: flex;
+  }
+  &__label{
+    a{
+      text-decoration: none;
+      background-color:rgb(196, 190, 190);
+      display: inline-block;
+      text-align: center;
+      padding: 1rem 1rem;
+      color: black;
+      border-radius: 10px 10px 0 0;
       &.active{
-        display: block;  
+        background-color: rgb(236, 230, 230);
       }
-    }  
+      &:not(.active):hover{
+        opacity: 0.5;
+        transition: 0.4s;    
+      }
+    }
+  }
+  &__content{
+    background-color: rgb(236, 230, 230);
+    display: none;
+    height: 50vh;
+    padding: 1rem;
+    &.active{
+      display: block;  
+    }
+  }  
 }
 
 .modal{
@@ -132,7 +129,7 @@ header{
     transform: translate(-50%, -50%) scale(0.7);
     transition: 0.3s;
     visibility: hidden;
-    z-index: 10;
+    z-index: 15;
     opacity: 0;
 
     &.active {
@@ -188,7 +185,7 @@ header{
   transition: 0.3s;
   visibility: hidden;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
   &.active {
     opacity: 0.8;
     visibility: visible;
@@ -220,7 +217,7 @@ header{
       padding: 1rem;
       position: relative;
       text-align: center;
-      .closeBtn1 {
+      .labelIcon {
         height: 50px;
         position: absolute;
         right: 0;
@@ -245,7 +242,7 @@ header{
       &.active{
         background-color: black;
         color: white;
-        .closeBtn1{
+        .labelIcon{
           span{
             background-color: white;
             &:nth-child(1) {
@@ -266,7 +263,7 @@ header{
       display: none;
       line-height: 2;
     }
-    .closeBtn2{
+    .closeBtn{
       text-align: center;
       display:block;
       background-color: gray;
