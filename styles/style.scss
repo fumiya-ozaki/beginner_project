@@ -1,6 +1,23 @@
-@import 'venders/reset';
-@import 'modules/variables';
-@import 'modules/mixin';
+// 全体設定＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+/* boxsizing */
+* {
+  box-sizing: border-box;
+}
+
+/* googlefont */
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+.content-width {
+  margin: 0 auto;
+  max-width: 1070px;
+  width: 80%;
+}
+
+.content-height{
+  margin-bottom: 100px;
+}
 
 .main-title{
   font-size: 2rem;
@@ -8,13 +25,10 @@
 .main-text{
   font-size: 1.5rem;
 }
+// 全体設定＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
-.content-width{
-  width: 80%;
-}
-.content-height{
-  margin-bottom: 100px;
-}
+
+// ヘッダー＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
 header{
   position: fixed;
@@ -55,7 +69,10 @@ header{
     }
   }
 }
-  
+// ヘッダー＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+// メインビジュアル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
 .main-visual{
   padding-top: 150px;
   &__image{
@@ -66,6 +83,9 @@ header{
     }
   }
 }
+// メインビジュアル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+// タブ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
 .tab{
   &__label-container {
@@ -99,6 +119,9 @@ header{
     }
   }  
 }
+// タブ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+// モーダル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
 .modal{
   height: 50vh;
@@ -174,6 +197,7 @@ header{
   }
 }
 
+
 .mask {
   background-color: black;
   cursor: pointer;
@@ -191,22 +215,9 @@ header{
     visibility: visible;
   }
 }
+// モーダル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
-.slider{
-  .swiper-container{
-    width: 80%;
-    .swiper-wrapper{
-      .swiper-slide{
-        img{
-          height: 100%;
-          width: 100%;
-        }
-
-      }
-    }
-  }
-}
-
+// よくある質問＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 .question{
   .acordion{
     &__title{
@@ -252,8 +263,6 @@ header{
           }
         }
       }
-      
-      
     }
     &__content{
       background-color: rgb(236, 230, 230);
@@ -267,31 +276,50 @@ header{
       text-align: center;
       display:block;
       background-color: gray;
-      color: $cWhite;
+      color: White;
       border-radius: 5px;
       cursor: pointer;
     }
   }
 }
-  
-  
-  footer{
-    background-color: rgb(236, 230, 230);
-    height: 30vh;
-    nav{height: 100%;}
-    .footer{
-      height: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      &__content{
-        margin-bottom: 1rem;
-        a{
-          text-decoration: none;
-          color: black;
+// よくある質問＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+// スライダー＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+.slider{
+  .swiper-container{
+    width: 80%;
+    .swiper-wrapper{
+      .swiper-slide{
+        img{
+          height: 100%;
+          width: 100%;
         }
       }
     }
   }
+}
+// スライダー＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+// フッター＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
+footer{
+  background-color: rgb(236, 230, 230);
+  height: 30vh;
+  nav{height: 100%;}
+  .footer{
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    &__content{
+      margin-bottom: 1rem;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+// フッター＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊

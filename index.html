@@ -6,15 +6,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Kameron&family=Noto+Sans+JP:wght@100&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/style.min.css" />
-    <link rel="stylesheet" href="styles/responsive.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
+    /><!-- googlefont読み込み -->
+    <link rel="stylesheet" href="styles/reset.css" /><!-- リセットCSS -->
+    <link rel="stylesheet" href="styles/style.css" /><!-- style.css読み込み -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><!-- swiper用CSS読み込み -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><!-- swiper用js読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jQuery読み込み -->
+    <title>Your Site</title><!-- サイトタイトル -->
   </head>
+
   <body>
+    <!-- ヘッダー -->
     <header>
       <nav class="header">
         <div class="header__logo">ロゴ</div>
@@ -26,7 +28,10 @@
         </ul>
       </nav>
     </header>
-
+    <!-- ヘッダー -->
+    
+    
+    <!-- メインビジュアル -->
     <section class="main-visual content-width content-height">
       <main>
         <h1 class="main-title">Your first web</h1>
@@ -36,16 +41,18 @@
         </div>
       </main>
     </section>
+    <!-- メインビジュアル -->
 
+    <!-- タブ -->
     <section class="tab content-width content-height">
       <h2 class="main-title">タブ</h2>
       <p class="main-text">こちらはタブエリアです</p>
       <ul class="tab__label-container">
-        <li class="tab__label"><a href="#" class="active" data-id="tab1">タブ１</a></li>
+        <li class="tab__label"><a href="#" class="active" data-id="tab1">タブ１</a></li><!-- activeクラスで初期表示 -->
         <li class="tab__label"><a href="#" data-id="tab2">タブ２</a></li>
         <li class="tab__label"><a href="#" data-id="tab3">タブ３</a></li>
       </ul>
-      <div class="tab__content active" id="tab1">
+      <div class="tab__content active" id="tab1"><!-- activeクラスで初期表示 -->
         <p>タブ１の情報（この中に写真やテキストを入れましょう）</p>
       </div>
       <div class="tab__content" id="tab2">
@@ -55,7 +62,9 @@
         <p>タブ３の情報（この中に写真やテキストを入れましょう）</p>
       </div>
     </section>
+    <!-- タブ -->
 
+    <!-- モーダル -->
     <section class="modal content-width content-height">
       <h2 class="main-title">モーダル</h2>
       <p class="main-text">こちらはモーダルエリアです</p>
@@ -72,7 +81,7 @@
         </div>
       </div>
         
-      <div class="modal__contents-container" id="modalArea">
+      <div class="modal__contents-container" id="modalArea"><!-- 以下は初期状態では非表示（javascriptで表示切替） -->
         <div class="modal__content" id="modal1">
           <p>モーダル1</p>
           <p>これはモーダル1です。×ボタンやマスク（黒い部分を）クリックしても戻ります</p>
@@ -96,78 +105,81 @@
           <span></span>
         </a>
       </div>
-      <div class="mask" id="mask"></div>
-  
-    </section>
 
+      <div class="mask" id="mask"></div><!-- モーダル表示時のマスク（黒い部分） -->
+    </section>
+    <!-- モーダル -->
+
+    <!-- よくある質問 -->
     <section class="question content-width content-height">
       <h2 class="main-title">よくある質問</h2>
       <p class="main-text">こちらはよくある質問です</p>
 
       <dl class="acordion" id="acordion">
-        <dt class="acordion__title arrow">
+        <dt class="acordion__title">
           お問い合わせ１<br>
-          <div class="labelIcon">
+          <div class="labelIcon"><!-- ＋ボタン部分 -->
               <span></span>
               <span></span>
           </div>
         </dt>
-        <dd class="acordion__content">
+        <dd class="acordion__content"><!-- 初期状態では非表示（javascriptで表示切替） -->
           回答１<br>
           お問合わせありがとうございます。<br>
           お問い合わせ１の回答です。
           <span class="closeBtn">閉じる</span>
-  
         </dd>
-        <dt class="acordion__title arrow">
+
+        <dt class="acordion__title">
           お問い合わせ２
-          <div class="labelIcon">
+          <div class="labelIcon"><!-- ＋ボタン部分 -->
               <span></span>
               <span></span>
           </div>
         </dt>
-        <dd class="acordion__content">
+        <dd class="acordion__content"><!-- 初期状態では非表示（javascriptで表示切替） -->
           回答2<br>
           お問合わせありがとうございます。<br>
           お問い合わせ２の回答です
           <span class="closeBtn">閉じる</span>
         </dd>
-        <dt class="acordion__title arrow">
+
+        <dt class="acordion__title">
           お問い合わせ３
-          <div class="labelIcon">
+          <div class="labelIcon"><!-- ＋ボタン部分 -->
               <span></span>
               <span></span>
           </div>
         </dt>
-        <dd class="acordion__content">
+        <dd class="acordion__content"><!-- 初期状態では非表示（javascriptで表示切替） -->
           回答3<br>
           お問合わせありがとうございます。<br>
           お問い合わせ３の回答です
           <span class="closeBtn">閉じる</span>
         </dd>
       </dl>
-  
     </section>
+    <!-- よくある質問 -->
 
-
+    <!-- スライダー -->
     <section class="slider content-width content-height">
       <h2 class="main-title">スライダー</h2>
       <p class="main-text">こちらはスライダーエリアです</p>
       <div class="swiper-container" id="swiper-1">
         <div class="swiper-wrapper">
-          <div class="swiper-slide slide1"><img src="image/slider_01.jpeg" alt=""></div>
-          <div class="swiper-slide slide2"><img src="image/slider_02.jpeg" alt=""></div>
-          <div class="swiper-slide slide3"><img src="image/slider_03.jpeg" alt=""></div>
-          <div class="swiper-slide slide4"><img src="image/slider_04.jpeg" alt=""></div>
+          <div class="swiper-slide slide1"><img src="image/slider_01.jpeg" alt=""></div><!-- 画像1枚目 -->
+          <div class="swiper-slide slide2"><img src="image/slider_02.jpeg" alt=""></div><!-- 画像2枚目 -->
+          <div class="swiper-slide slide3"><img src="image/slider_03.jpeg" alt=""></div><!-- 画像3枚目 -->
+          <div class="swiper-slide slide4"><img src="image/slider_04.jpeg" alt=""></div><!-- 画像4枚目 -->
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div><!-- スライダー下部●部分 -->
+        <div class="swiper-button-prev"></div><!-- スライダー左矢印部分 -->
+        <div class="swiper-button-next"></div><!-- スライダー右矢印部分 -->
       </div>
-
     </section>
+    <!-- スライダー -->
 
-
+    <!-- フッター -->
     <footer>
       <nav>
         <ul class="footer">
@@ -177,6 +189,9 @@
         </ul>
       </nav>
     </footer>
-<script src="scripts/main.js"></script>
+    <!-- フッター -->
+
+<script src="scripts/main.js"></script><!-- main.js読み込み -->
+
   </body>
 </html>

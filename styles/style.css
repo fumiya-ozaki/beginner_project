@@ -1,149 +1,3 @@
-@charset "UTF-8";
-/*!
- * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
- * http://cssreset.com
- * Copyright 2012 Yahoo! Inc. All rights reserved.
- * http://yuilibrary.com/license/
- */
-/*
-    TODO will need to remove settings on HTML since we can't namespace it.
-    TODO with the prefix, should I group by selector or property for weight savings?
-*/
-html {
-  color: #000;
-  background: #fff;
-}
-
-/*
-  TODO remove settings on BODY since we can't namespace it.
-*/
-/*
-  TODO test putting a class on HEAD.
-      - Fails on FF.
-*/
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset,
-img {
-  border: 0;
-}
-
-/*
-  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
-*/
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
-  font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-caption,
-th {
-  text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-q:before,
-q:after {
-  content: '';
-}
-
-abbr,
-acronym {
-  border: 0;
-  font-variant: normal;
-}
-
-/* to preserve line-height and selector appearance */
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*to enable resizing for IE*/
-input,
-textarea,
-select {
-  *font-size: 100%;
-}
-
-/*because legend doesn't inherit in IE */
-legend {
-  color: #000;
-}
-
-/* YUI CSS Detection Stamp */
-#yui3-css-stamp.cssreset {
-  display: none;
-}
-
-/******************************************************************
-全体適用
-******************************************************************/
 /* boxsizing */
 * {
   box-sizing: border-box;
@@ -157,88 +11,11 @@ body {
 .content-width {
   margin: 0 auto;
   max-width: 1070px;
-  width: 90%;
+  width: 80%;
 }
 
-/* <br class="br-pc"> tablet */
-.br-pc {
-  display: block;
-}
-
-.br-sp {
-  display: none;
-}
-
-.font-sm {
-  font-size: 16px;
-}
-
-.font-md {
-  font-size: 19px;
-}
-
-.font-lr {
-  font-size: 23px;
-}
-
-.font-lg {
-  font-size: 36px;
-}
-
-.mb-sm {
-  margin-bottom: 16px !important;
-}
-
-.mb-lg {
-  margin-bottom: 150px !important;
-}
-
-.pb-sm {
-  padding-bottom: 16px !important;
-}
-
-.pb-lg {
-  padding-bottom: 150px !important;
-}
-
-/******************************************************************
-tabletで適用
-******************************************************************/
-/******************************************************************
-smartphoneで適用
-******************************************************************/
-@media screen and (max-width: 480px) {
-  /* <br class="br-sp"> smartphone */
-  .br-pc {
-    display: none;
-  }
-  .br-sp {
-    display: block;
-  }
-  .font-sm {
-    font-size: 14px;
-  }
-  .font-md {
-    font-size: 17px;
-  }
-  .font-lr {
-    font-size: 17px;
-  }
-  .font-lg {
-    font-size: 25px;
-  }
-  .mb-sm {
-    margin-bottom: 16px !important;
-  }
-  .mb-lg {
-    margin-bottom: 80px !important;
-  }
-  .pb-sm {
-    padding-bottom: 16px !important;
-  }
-  .pb-lg {
-    padding-bottom: 80px !important;
-  }
+.content-height {
+  margin-bottom: 100px;
 }
 
 .main-title {
@@ -247,14 +24,6 @@ smartphoneで適用
 
 .main-text {
   font-size: 1.5rem;
-}
-
-.content-width {
-  width: 80%;
-}
-
-.content-height {
-  margin-bottom: 100px;
 }
 
 header {
@@ -449,15 +218,6 @@ header .header__link a {
   visibility: visible;
 }
 
-.slider .swiper-container {
-  width: 80%;
-}
-
-.slider .swiper-container .swiper-wrapper .swiper-slide img {
-  height: 100%;
-  width: 100%;
-}
-
 .question .acordion__title {
   cursor: pointer;
   border: solid 1px black;
@@ -520,9 +280,18 @@ header .header__link a {
   text-align: center;
   display: block;
   background-color: gray;
-  color: white;
+  color: White;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.slider .swiper-container {
+  width: 80%;
+}
+
+.slider .swiper-container .swiper-wrapper .swiper-slide img {
+  height: 100%;
+  width: 100%;
 }
 
 footer {
