@@ -1,0 +1,4 @@
+{
+  "easysass.excludeRegex": "^_+",
+  "liveServer.settings.port": 5501
+}
