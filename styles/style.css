@@ -41,9 +41,9 @@ header {
 
 header .header {
   background-color: #ece6e6;
-  display: flex;
+  display: flex;/*ロゴとリンクを左右に配置*/
   height: 50px;
-  justify-content: space-between;
+  justify-content: space-between;/*ロゴとリンクを左右に配置*/
   margin: 0 auto;
   width: 80%;
 }
@@ -88,7 +88,7 @@ header .header__link a {
 
 .main-visual__image img {
   height: 50vh;
-  object-fit: cover;
+  object-fit: cover;/*ページ幅によって画像が歪まないよう設定*/
   width: 100%;
 }
 /* メインビジュアル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
@@ -100,7 +100,7 @@ header .header__link a {
 
 .tab__label a {
   background-color: #c4bebe;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;/*ラベルを角丸にする*/
   color: black;
   display: inline-block;
   padding: 1rem 1rem;
@@ -119,13 +119,13 @@ header .header__link a {
 
 .tab__content {
   background-color: #ece6e6;
-  display: none;
+  display: none;/*初期状態は非表示*/
   height: 50vh;
   padding: 1rem;
 }
 
 .tab__content.active {
-  display: block;
+  display: block;/*表示に切り替え*/
 }
 /* タブ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
 
@@ -157,30 +157,30 @@ header .header__link a {
 .modal__contents-container {
   background-color: white;
   height: 50vh;
-  left: 50%;
-  opacity: 0;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(.7);
-  transition: 0.3s;
-  visibility: hidden;
+  left: 50%;/*画面中央に固定*/
+  opacity: 0;/*初期値は非表示*/
+  position: fixed;/*画面中央に固定*/
+  top: 50%;/*画面中央に固定*/
+  transform: translate(-50%, -50%) scale(.7);/*アニメーション*/
+  transition: 0.3s;/*アニメーションの時間*/
+  visibility: hidden;/*初期値は非表示*/
   width: 80%;
-  z-index: 15;
+  z-index: 15;/*最前面表示*/
 }
 
 .modal__contents-container.active {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  visibility: visible;
+  opacity: 1;/*表示に切り替え*/
+  transform: translate(-50%, -50%) scale(1);/*アニメーション*/
+  visibility: visible;/*表示に切り替え*/
 }
 
 .modal__content {
-  display: none;
+  display: none;/*初期値は非表示*/
   padding: 1rem;
 }
 
 .modal__content.active {
-  display: block;
+  display: block;/*表示に切り替え*/
 }
 
 .modal__close {
@@ -189,12 +189,13 @@ header .header__link a {
   border-radius: 3px;
   cursor: pointer;
   height: 50px;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  position: absolute;/*×ボタンの位置を固定*/
+  right: 1rem;/*×ボタンの位置を固定*/
+  top: 1rem;/*×ボタンの位置を固定*/
   width: 50px;
 }
 
+/* ×ボタン */
 .modal__close span {
   background-color: black;
   display: block;
@@ -214,27 +215,29 @@ header .header__link a {
   transform: translateX(-17px) rotate(-45deg);
 }
 
+/*マスク*/
 .mask {
   background-color: black;
   cursor: pointer;
   height: 100%;
   left: 0;
-  opacity: 0;
+  opacity: 0;/*初期値は非表示*/
   position: fixed;
   top: 0;
   transition: .3s;
-  visibility: hidden;
+  visibility: hidden;/*初期値は非表示*/
   width: 100%;
   z-index: 10;
 }
 
 .mask.active {
-  opacity: 0.8;
-  visibility: visible;
+  opacity: 0.8;/*表示に切り替え*/
+  visibility: visible;/*表示に切り替え*/
 }
 /* モーダル＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
 
 /* よくある質問＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ */
+/*タイトル*/
 .question .acordion__title {
   border: solid 1px black;
   border-radius: 5px;
@@ -245,6 +248,7 @@ header .header__link a {
   text-align: center;
 }
 
+/* ×ボタン */
 .question .acordion__title .labelIcon {
   height: 50px;
   position: absolute;
@@ -271,6 +275,7 @@ header .header__link a {
   transform: translateX(-17px);
 }
 
+/*タイトルがクリックされた時の設定*/
 .question .acordion__title.active {
   background-color: black;
   color: white;
@@ -284,6 +289,7 @@ header .header__link a {
   transform: translateX(-17px);
 }
 
+/*アコーディオンの中身*/
 .question .acordion__content {
   background-color: #ece6e6;
   border-radius: 5px;
@@ -293,6 +299,7 @@ header .header__link a {
   padding: 1rem;
 }
 
+/*閉じるボタン*/
 .question .acordion .closeBtn {
   background-color: gray;
   border-radius: 5px;
